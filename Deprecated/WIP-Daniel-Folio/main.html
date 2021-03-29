@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="custom-css.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Import Flickity -->
+<link rel="stylesheet" href="plugins/flickity.css" media="screen">
+<script src="plugins/flickity.pkgd.min.js"></script>
+
+<!-- Import jQuery and custom scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="files/scripts.js"></script>
+
+<!-- Import Parallax library -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script> -->
+
+<!-- Import ScrollMagic and GSAP, which ScrollMagic requires for tweening-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar floating-header w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+
+    <a href="#" class="w3-button floating-header-title">DANIEL GALBRAITH - PROGRAMMER, TECH ARTIST</a>
+
+    <a href="#contact" class="header-item-right w3-button w3-padding-large w3-hide-small">CONTACT</a>
+    <a href="#resume" class="header-item-right w3-button w3-padding-large w3-hide-small">RESUME</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <a href="#projects" button class="w3-padding-large w3-button" title="Projects">PROJECTS <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">Think of the Children</a>
+        <a href="#" class="w3-bar-item w3-button">Project: TAMBO</a>
+        <a href="#" class="w3-bar-item w3-button">Faily Rocketman</a>
+        <a href="#" class="w3-bar-item w3-button">Ben's Garage</a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#projects" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PROJECTS</a>
+  <a href="#resume" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">RESUME</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!--
+      HELLO SEAN!! :D 
+        Thanks so much for looking over this for me, I really appreciate it. I'm very sorry for this spaghetti code
+        abomination...
+       
+      ISSUE: Parallax Stacking
+        The 5 slides on my parallax animation are spaced vertically, not stacked on top of one another.
+       I've currently commented out sides 3 through 5, because otherwise you can't see the issue clearly.
+
+      CLIPPING SETUP
+       If you comment out the 'clip-path' line in custom-css.css line 53 (the .parallax-header object), you'll see slide2
+       floating below the box. I need both of them to appear on top of one another, so they can parallax correctly!
+
+      TWEENING SETUP
+        The parallax is handled by ScrollMagic, in the script I've declared at the bottom, and according to the Chrome console,
+        the tweening appears to be working.
+        Line 347 is the tween declaration (note I've only added the two currently uncommented on line 353)
+
+      COMMENTED OUT STUFF
+        The largely duplicated elements below it are my own manual solution I'm trying to replace.
+        It does work, but has no smoothing so looks really nauseating and flickery. You can see the 
+        code in scripts.js if you're curious.
+
+      HOW DO I ACHIEVE THIS?
+        I've assigned each slide the 'parallax-element' class, but haven't made a css object for it yet.
+        How do I need to set that up, and what changes are needed to parallax-header for the slides to appear stacked?
+        EXTRA: Directly below this is an svg, 'static frame', which is just meant to fill the whole parallax-header div
+          over the top of the parallax layers, but is currently invisible. How do I get it back?
+
+  -->
+
+  <!-- Parallax Header -->
+  <div id="parallax-section" class="parallax-header">
+
+      <!-- Moving Elements -->
+            <!--
+            -->
+      <div id="slide5" class="parallax-element"> <img src="vectors/parallax-header-layer-5.svg" style="max-width:100%"> </div>
+      <div id="slide4" class="parallax-element"> <img src="vectors/parallax-header-layer-4.svg" style="max-width:100%"> </div>
+      <div id="slide3" class="parallax-element"> <img src="vectors/parallax-header-layer-3.svg" style="max-width:100%"> </div>
+      <div id="slide2" class="parallax-element"> <img src="vectors/parallax-header-layer-2.svg" style="max-width:100%"> </div>
+      <div id="slide1" class="parallax-element"> <img src="vectors/parallax-header-layer-1.svg" style="max-width:100%"> </div>
+      
+      <!-- Static Frame -->
+      <div id="slide0" class="parallax-element"> <img src="vectors/parallax-header-layer-0.svg" style="max-width:100%"> </div>
+    
+    <!-- Moving Elements -->
+      <!--
+    <section  data-direction="down" data-speed="0.6">
+      <img class="parallax-element" src="vectors/parallax-header-layer-5.svg" style="max-width:100%" data-direction="down" data-speed="0.5">
+      <img class="parallax-element" src="vectors/parallax-header-layer-4.svg" style="max-width:100%" data-direction="down" data-speed="0.4">
+      <img class="parallax-element" src="vectors/parallax-header-layer-3.svg" style="max-width:100%" data-direction="down" data-speed="0.3">
+      <img class="parallax-element" src="vectors/parallax-header-layer-2.svg" style="max-width:100%" data-direction="down" data-speed="0.2">
+      <img class="parallax-element" src="vectors/parallax-header-layer-1.svg" style="max-width:100%" data-direction="down" data-speed="0.1">
+      
+    </section>
+  -->
+
+    
+  </div>
+
+  <!-- Fading background -->
+  <!--
+  <section>
+    <div class="img-wrapper">
+      <div class="front">
+        <img src="images/sanfran.jpg" style="max-width:100%">
+      </div>
+    </div>
+  </section>
+-->
+
+  <!-- Projects Flickity Carousel -->
+  <div id="carousel-section">
+  <div id="carousel-pin">
+  <div>
+  <div class="carousel margin"
+  data-flickity='{ "wrapAround": true, "contain": true }'
+  id="projects">
+    <div class="carousel-cell">
+        <h1> Think Of The Children <company> <img src="images/jammed-up-studios-logo.png"> </company> </h1>
+          <h2> Gameplay Programmer, Technical Artist </h2>
+          <wedge><img src="vectors/carousel-year-wedge.svg" alt="Year" /></wedge>
+          <h3> 2017 </h3>
+          <platform> <img src="vectors/platform-xbox-one.svg"> </platform>
+          <platform1> <img src="vectors/platform-ps4.svg"> </platform1>
+          <platform2> <img src="vectors/platform-steam.svg"> </platform2>
+          
+          <img src="https://carbonmade-media.accelerator.net/35584877;1422x800.png?auto=webp" alt="Think of the Children" onclick="document.getElementById('projectModal').style.display='block'"/>
+    </div>
+    <div class="carousel-cell">
+      <h1> MineSolar Car Factory </h1>
+      <img src="https://carbon-media.accelerator.net/0000000h2Ut/ax9ZpGDIaeOdnQNZtvPmyd;1422x800.png?auto=webp" alt="MineSolar Car Factory" />
+    </div>
+    <div class="carousel-cell">
+      <img src="https://carbon-media.accelerator.net/0000000h2Ut/7HaLb5idI0Uc0c3CaCYoWB;369x800.png?auto=webp" alt="Rocketman" />
+    </div>
+    <div class="carousel-cell">
+      <img src="https://carbonmade-media.accelerator.net/37402422;1280x720.png?auto=webp" alt="Rev Heads Rally" />
+    </div>
+    <div class="carousel-cell">
+      <img src="https://carbonmade-media.accelerator.net/37354764;1422x800.png?auto=webp" alt="Ben's Garage" />
+    </div>
+  </div>
+</div>
+</div>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32" style="height: 300px;"> 
+        <span onclick="document.getElementById('projectModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>PROJECT</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('projectModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+<!--
+  HELLO AGAIN!!
+
+  SECOND ISSUE
+    When you scroll down the page, you'll see that the 'The Band' section pins to the screen temporarily when you scroll past.
+    It's a very nice effect, declared in line 404 (below the parallax bit), and I'd love to apply it to the carousel as well.
+
+  THE PROBLEM
+    However, when I copy the exact same logic, you get a janky effect where the carousel jumps downwards and stays there.
+    Something to do with the carousel's layout seems to be stomping on the GSAP positioning logic.
+    I tried nesting it in an empty div, see if that would help, but it doesn't seem to.
+
+  HOW DO I ACHIEVE THIS?
+    Would you be able to assist me with this? I want exactly the same behaviour as the Band section (though with the larger duration),
+    and for the pin effect to work correctly.
+
+-->
+
+<!-- The Band Section -->
+  <div id="bandSection" class="w3-container w3-content w3-center w3-padding-64" style="margin-top: 100px">
+    <div style="max-width:800px; margin-left: auto; margin-right: auto;"> 
+    <div id="band-pin" >
+      
+      <div class="profile-picture">
+        <img id="profile-picture" src="images/portrait-qvb.png">
+      </div>
+      <h1 class="w3-wide" style="position: block">About Me</h1>
+
+      <p class="w3-justify">
+        Dan is a programmer and technical artist who likes wearing as many different hats as possible. He's very tall, and really loves cats. Dan worked at Spunge Games on several commercial releases, has built a number of Serious Games for Queensland universities, and occasionally tutors in a Games Design course. Previously, he worked on a co-op party game about very poor parenting called Think of the Children.
+      </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-content w3-center w3-padding-32 skills-section" style="margin-top: 0px;">
+    
+    <h1 class="w3-wide" style="position: block">Skills</h1>
+    
+        <div class="w3-row-padding skills-major-box">
+          <div class="w3-half w3-margin-bottom">
+            <div class="w3-container w3-white">
+              <p><b>Gameplay & Systems Programming</b></p>
+              <p class="w3-opacity">Fri 27 Nov 2016</p>
+              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+              <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+            </div>
+          </div>
+          <div class="w3-half w3-margin-bottom">
+            <div class="w3-container w3-white">
+              <p><b>Tech Art</b></p>
+              <p class="w3-opacity">Sat 28 Nov 2016</p>
+              <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+              <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-row w3-padding-32">
+          <div id="scaleImage" class="w3-third">
+            <p>Name</p>
+            <img src="images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+          </div>
+          <div class="w3-third">
+            <p>Name</p>
+            <img src="images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+          </div>
+          <div class="w3-third">
+            <p>Name</p>
+            <img src="images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+  <!-- The Tour Section -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">TOUR DATES</h2>
+      <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">September <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
+        <li class="w3-padding">October <span class="w3-tag w3-red w3-margin-left">Sold out</span></li>
+        <li class="w3-padding">November <span class="w3-badge w3-right w3-margin-right">3</span></li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/newyork.jpg" alt="New York" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>New York</b></p>
+            <p class="w3-opacity">Fri 27 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/paris.jpg" alt="Paris" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Paris</b></p>
+            <p class="w3-opacity">Sat 28 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/sanfran.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>San Francisco</b></p>
+            <p class="w3-opacity">Sun 29 Nov 2016</p>
+            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticket Modal -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('ticketModal').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      </header>
+      <div class="w3-container">
+        <p><label><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Chicago, US<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+// carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('projectModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<script>
+// Flickity onclick opens modal
+const flkty = Flickity.data('.carousel-cell');
+
+flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
+  console.log(cellIndex);
+  document.getElementById('ticketModal').style.display='none';
+});
+
+</script>
+
+<!-- ScrollMagic tween builder -->
+<script>
+
+TweenLite.defaultEase = Linear.easeNone;
+var controller = new ScrollMagic.Controller();
+TweenMax.lagSmoothing(0);
+TweenMax.ticker.fps(30);
+
+// Parallax tween scene
+var headerTimeline = new TimelineMax();
+headerTimeline.to("#slide1", 1, { y: "40%", rotation: 1, ease: Linear.easeNone, force3D: false }, 0);
+headerTimeline.to("#slide2", 1, { y: "65%", rotation: 1, ease: Linear.easeNone }, 0);
+headerTimeline.to("#slide3", 1, { y: "90%", rotation: 1, ease: Linear.easeNone }, 0);
+headerTimeline.to("#slide4", 1, { y: "95%", rotation: 1, ease: Linear.easeNone }, 0);
+headerTimeline.to("#slide5", 1, { y: "98%", rotation: 1, ease: Linear.easeNone }, 0);
+
+// Declare scene (contains multiple elements)
+var headerScene = new ScrollMagic.Scene({
+    triggerElement: "#parallax-section",
+    duration: "100%",
+    triggerHook: 0,
+  })
+  .setTween(headerTimeline)
+  .addIndicators({
+    name: "Header Timeline",
+    colorTrigger: "white",
+    colorStart: "white",
+    colorEnd: "white"
+  })
+  .addTo(controller);
+
+
+  /*
+  // Pin Projects carousel to screen for a while
+  var projectsPinScene = new ScrollMagic.Scene({
+    triggerElement: "#carousel-section",
+    duration: 600,
+    triggerHook: 0.5,
+    start: "top 50%",
+    end: "bottom 50%"
+  })
+  .setPin("#carousel-pin")
+  .addIndicators({name: "1 (duration: 600)"})
+  .addTo(controller);
+  */
+
+  // Pin band section
+  var bandPinScene = new ScrollMagic.Scene({
+    triggerElement: "#bandSection",
+    duration: 300,
+    triggerHook: 0.1,
+    start: "50% 50%",
+    end: "bottom 50%"
+  })
+  .setPin("#band-pin")
+  .setTween("#profile-picture", 1, { y: "-2%", scale: 0.975 })
+  .addIndicators({name: "1 (duration: 300)"})
+  .addTo(controller);
+
+    /*
+  // Band scale tween scene
+  var bandScene = new ScrollMagic.Scene({
+    triggerElement: "#bandSection",
+    duration: "50%"
+  })
+  .setTween("#scaleImage", 0.5, { scale: 2.5 })
+  .addIndicators({
+    name: "Band Timeline",
+    colorTrigger: "white",
+    colorStart: "white",
+    colorEnd: "white"
+  })
+  .addTo(controller);
+  */
+
+</script>
+
+</body>
+</html>

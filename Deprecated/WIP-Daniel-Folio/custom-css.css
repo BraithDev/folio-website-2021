@@ -1,0 +1,251 @@
+/* Import fonts */
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+}
+
+/* Colour changing background */
+body {
+    margin:0;
+    background-color: #1a1a1aff;
+    width: 100%;
+    height: 100%;
+    /* transition: background-color 2.0s; */
+}
+
+.backgroundChangeColour {
+    background-color: rgb(163, 163, 163);
+}
+
+/* Floating header */
+.floating-header,.floating-header:hover {
+    color:#fff!important;
+    background-color:#1a1a1aff!important
+}
+
+.displayNone {
+    display: none
+    !important
+}
+
+.floating-header-title {
+    opacity: 0;
+    padding:12px 24px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.floating-header-title:hover {
+    color:#000!important;background-color:#ccc!important
+}
+
+
+/* Parallax Logic 
+
+*/
+
+.parallax-header {
+    display: block;
+    width: 100%;
+    height: 900px;
+    margin-top: 0px;
+    margin-right: 0px;
+    background: rgb(221, 221, 221);
+    border-radius: 5px;
+    clip-path: inset(0px 0px 0px 0px);
+}
+
+.parallax-element {
+    top: -100px;
+    position: absolute;
+    width: 100%;
+}
+
+.parallax-header img {
+    width: 100%;
+    height: 100%;
+}
+
+.margin {
+    margin-top: 500px;
+}
+
+/* Flickity Carousel Config  */
+.carousel {
+    position: absolute;
+    background: #EEE;
+  }
+  
+.carousel-cell {
+/*width: 66%;*/
+width: calc(600px * calc(16/9));
+height: 600px;
+margin-right: 10px;
+background: #8C8;
+border-radius: 5px;
+counter-increment: carousel-cell;
+}
+
+
+.carousel-cell img {
+    top: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.carousel-cell h1, h2, h3, wedge {
+    position: absolute;
+    height: 10%;
+    top: 0px;
+    
+    font-size: 175%;
+    text-align: left;
+    vertical-align: middle;
+    margin:auto;
+    color: rgb(255, 255, 255);
+}
+
+.carousel-cell h1 {
+    font-size: 220%;
+    height: 15%;
+    width: 100%;
+    top: auto;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 10px 10px 30px;
+}
+
+.carousel-cell h2 {
+    left: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 50px 10px 100px;
+}
+
+.carousel-cell h3 {
+    color: rgb(34, 34, 34);
+    padding: 5px 0px 20px 20px;
+}
+
+.carousel-cell wedge {
+    position: absolute;
+    height: 10%;
+}
+
+.carousel-cell company {
+    position: absolute;
+    height: 90%;
+    left: auto;
+    right: 20px;
+    top: 5%;
+}
+
+.carousel-cell platform, platform1, platform2 {
+    position: absolute;
+    height: 10%;
+    top: calc(10% + 20px);
+    left: 10px;
+    max-width: 20vh;
+}
+
+.carousel-cell platform1 {
+    top: calc(20% + 40px);
+}
+
+.carousel-cell platform2 {
+    top: calc(30% + 60px);
+    width: auto;
+}
+
+/* Override these settings on mobile */
+@media ( max-aspect-ratio: 16/9 ) {
+    
+    /* Downscaled parallax slides on mobile */
+    .parallax-element {
+        width: calc(100vh * (16/9));
+        height: 100vh;
+    }
+
+
+    
+    /* Full width carousel width on mobile */
+    .carousel-cell {
+        width: calc(100vh * (9/16));
+        height: 75vh;
+    }
+}
+
+/* About Me section */
+.profile-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+    width: 50%;
+    clip-path: circle(45% at center);
+}
+
+.profile-picture img {
+    width: 100%;
+}
+
+/* About Me section */
+.skills-section {
+    max-width: 200vw;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: rgb(173, 173, 173);
+}
+
+.skills-major-box {
+    max-width: 1200px; 
+    margin-left:auto; 
+    margin-right: auto; 
+    padding: 32px
+}
+
+.skills-floating-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+    width: 100%;
+}
+
+/* Fade slide in */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+
+/* Scroll colour change */
+img-wrapper {
+    display: grid;
+    height: 100vh;
+  }
+   
+.img-wrapper div {
+    grid-column: 1;
+    grid-row: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--gray);
+    transition: opacity 0.1s;
+}
+
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="parallax-header-layer-1.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 50.799999 28.575001"
+   height="108"
+   width="192">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="1912"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     borderlayer="true"
+     units="px"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="56.298196"
+     inkscape:cx="95.74324"
+     inkscape:zoom="5.6"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     sodipodi:insensitive="true"
+     style="display:none"
+     inkscape:label="Layer 5"
+     id="layer6"
+     inkscape:groupmode="layer">
+    <ellipse
+       ry="4.1011848"
+       rx="4.0256515"
+       cy="14.859257"
+       cx="25.860214"
+       id="path1448"
+       style="display:inline;fill:#b3b3b3;fill-opacity:1;stroke-width:0.660666;paint-order:fill markers stroke" />
+  </g>
+  <g
+     style="display:none"
+     inkscape:label="Layer 4"
+     id="layer5"
+     inkscape:groupmode="layer">
+    <path
+       style="display:inline;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.0647711px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 47.634445,12.123068 41.573711,11.567885 38.473945,10.503788 37.039725,8.7457122 34.217553,8.9770375 30.747666,12.123068 28.804529,13.788613 22.558736,16.055606 17.83969,15.269098 15.711493,14.066203 11.223774,10.318728 9.3731687,9.3934228 5.9032827,11.475357 3.3586991,11.429094 1.6006234,11.706686 -0.89769351,11.290301 -0.66636821,27.760693 48.050832,26.372739 Z"
+       id="path853" />
+  </g>
+  <g
+     style="display:none"
+     inkscape:label="Layer 3"
+     id="layer4"
+     inkscape:groupmode="layer">
+    <path
+       style="display:inline;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.0647711px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0.35146495,15.130303 11.89014205,0.18506 -1.387953,2.868438 4.580248,-2.683375 4.719045,1.387953 c 0,0 0,0 0,0 l 2.081933,0.18506 0.323856,-1.017833 3.238561,1.480485 2.544582,-1.24916 1.249158,1.15663 3.284825,0.601447 1.526751,-2.266994 6.939773,-0.231326 6.060734,0.97157 -1.943136,10.640986 -42.7027315,-0.87904 z"
+       id="path851"
+       inkscape:export-filename="C:\Users\dgalb\Documents\Folio\Test SVGs\Layer3.png"
+       inkscape:export-xdpi="90.154457"
+       inkscape:export-ydpi="90.154457" />
+  </g>
+  <g
+     style="display:none"
+     inkscape:label="Layer 2"
+     id="layer3"
+     inkscape:groupmode="layer">
+    <path
+       style="display:inline;fill:#4d4d4d;fill-opacity:1;stroke:none;stroke-width:0.0647711px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0.35146495,15.1303 5.3018361,14.528855 c 0,0 2.3595223,1.665545 2.5908476,1.711811 0.2313266,0.04626 7.2173623,0.601445 7.2173623,0.601445 l 2.313259,-0.04626 0.971568,1.43422 1.758075,-1.341688 0.740241,1.295425 3.238561,1.064097 1.526749,-0.09252 3.33109,1.711808 1.943136,-0.925303 0.647715,-2.683378 1.110362,2.498318 1.989401,-0.693976 1.24916,-0.879037 0.462652,-3.377358 2.498318,-1.341688 1.341688,-0.370122 0.138797,-1.896871 4.210126,0.693976 2.174462,1.758077 4.071333,-0.277592 V 28.454662 H 0.16640498 Z"
+       id="path849"
+       inkscape:export-filename="C:\Users\dgalb\Documents\Folio\Test SVGs\Layer2.png"
+       inkscape:export-xdpi="90.154457"
+       inkscape:export-ydpi="90.154457" />
+  </g>
+  <g
+     style="display:inline"
+     inkscape:label="Layer 1"
+     id="layer1"
+     inkscape:groupmode="layer">
+    <path
+       style="display:inline;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.0647711px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0.027609,13.418493 1.1103638,0.508914 4.1638633,-1.249157 4.1638633,1.758076 1.3879546,3.747475 4.348923,0.925304 4.348925,-0.09252 1.943135,2.544581 4.580249,-0.971568 0.555182,1.943137 3.423621,0.416385 0.508916,-4.395187 1.943137,2.960967 2.313256,-0.879035 1.110365,-2.452055 1.52675,1.61928 0.508915,-4.302658 4.811576,-3.099765 0.508918,-1.387956 3.51615,-0.323854 3.284825,1.61928 1.064098,-0.55518 v 17.95087 H 0.027609 Z"
+       id="path847"
+       inkscape:export-filename="C:\Users\dgalb\Documents\Folio\Test SVGs\Layer1.png"
+       inkscape:export-xdpi="90.154457"
+       inkscape:export-ydpi="90.154457" />
+  </g>
+  <g
+     style="display:none"
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 0">
+    <path
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.0647711px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0.027609,16.379463 5.2742271,-3.701213 10.6872489,-2.544585 0.879037,1.0641 -0.693977,1.341688 0.508916,0.786508 -1.573015,3.51615 c 0,0 -1.249159,0.323857 -1.202893,0.50892 0.04626,0.18506 2.452052,3.747475 2.452052,3.747475 l 2.683379,-0.508917 2.174461,4.996635 4.904106,1.43422 1.387956,-2.405788 3.747475,0.462653 0.138798,2.452052 3.423618,-2.035666 -0.138795,-3.469886 4.857842,0.323856 1.434218,-1.665544 c 0,0 4.256396,1.110361 4.302658,0.46265 0.04626,-0.647711 0.370123,-4.210128 1.156631,-4.025068 0.786505,0.185062 4.58025,0.647713 4.58025,0.647713 v 11.05737 H -0.01865632 Z"
+       id="path845"
+       inkscape:export-filename="C:\Users\dgalb\Documents\Folio\Test SVGs\Layer0.png"
+       inkscape:export-xdpi="90.154457"
+       inkscape:export-ydpi="90.154457" />
+  </g>
+</svg>

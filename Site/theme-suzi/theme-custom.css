@@ -1,0 +1,22 @@
+@import url("styles/themes/theme-suzi.min.css");
+.factory-flag{ visibility: hidden; }
+
+
+/* About Me section */
+.profile-picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
+    width: 40%;
+    clip-path: circle(45% at center);
+}
+
+.profile-picture img {
+    width: 100%;
+}
+
+.overflow-width-50 {
+    margin-left: -50%;
+    margin-right: -50%;
+}

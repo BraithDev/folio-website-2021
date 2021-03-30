@@ -90,6 +90,7 @@ $(function() { new (function(){
 		if (history && history.replaceState) {
 			history.replaceState("", document.title, window.location.pathname + window.location.search);
 		}
+
 		new YoutubeBG();
 		new VimeoBG();
 		new VideoBG();

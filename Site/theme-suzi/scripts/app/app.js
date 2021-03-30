@@ -14,6 +14,7 @@ module.exports = new (function(){
 	var $body = $('body');
 	var $views = $('.view');
 	var $bacgrounds;
+	var $floaters;
 	this.prepare = function(callback){
 		if(window.location.protocol === 'file:' && !$('body').hasClass('example-page')){
 			$('<div class="file-protocol-alert alert colors-d background-80 heading fade in">	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button> Upload files to web server and open template from web server. If template is opened from local file system, some links, functions and examples may work incorrectly.</div>')
@@ -58,6 +59,7 @@ module.exports = new (function(){
 			$('body>img.bg').remove();
 		}
 		$bacgrounds = $('.bg');
+		$floaters = $('.parallax-element');
 		callback();
 	};
 	this.setup = function(callback){
@@ -143,6 +145,33 @@ module.exports = new (function(){
 	}
 	this.tick = function(){ // This is the parallax function!
 		$bacgrounds.each(function(){
+
+			var $this = $(this);
+			var cfg = $this.data();
+			var opa, xr, yr, or;
+			if(cfg.ssOpacity !== undefined){
+				opa = cfg.ssOpacity;
+				xr = cfg.ssOrig.xr;
+				yr = cfg.ssOrig.yr;
+				or = cfg.ssOrig.or;
+			}else{
+				opa = 1;
+				xr = 1;
+				yr = 1;
+				or = 'center center';
+			}
+			var x = cfg.normalX + (cfg.zoomXDelta * xr);
+			var y = cfg.normalY + (cfg.zoomYDelta * yr) + (cfg.parallaxY !== undefined ? cfg.parallaxY : 0);
+			var sc = cfg.normalScale * (cfg.ssScale !== undefined ? cfg.ssScale : 1);
+			if(Modernizr.csstransforms3d && appShare.force3D){
+				$this.css({transform: 'translate3d('+x+'px, '+y+'px, 0px) scale('+sc+', '+sc+')', opacity: opa, 'transform-origin': or+' 0px'});
+			}else{
+				$this.css({transform: 'translate('+x+'px, '+y+'px) scale('+sc+', '+sc+')', opacity: opa, 'transform-origin': or});
+			}
+		});
+
+		// Duplicate this functionality, but for floating objects
+		$floaters.each(function(){
 			var $this = $(this);
 			var cfg = $this.data();
 			var opa, xr, yr, or;

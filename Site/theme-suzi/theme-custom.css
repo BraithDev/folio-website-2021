@@ -41,3 +41,11 @@
     left: auto; 
     text-align: center;
 }
+
+.hover-overlay:hover img {
+    transform: scale(1.25,1.25) rotate(-5deg);
+    -webkit-transform: scale(1.25,1.25) rotate(-5deg);
+    -moz-transform: scale(1.25,1.25) rotate(-5deg);
+    -ms-transform: scale(1.25,1.25) rotate(-5deg);
+    -o-transform: scale(1.25,1.25) rotate(-5deg);
+}

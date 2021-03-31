@@ -42,6 +42,16 @@
     text-align: center;
 }
 
+.skills-list {
+    margin-left: auto;
+    margin-right: 0%;
+    right: 0px;
+    top: 0px;
+    margin-top: 0px;
+    float: right;
+    position: absolute;
+}
+
 .hover-overlay:hover img {
     transform: scale(1.25,1.25) rotate(-5deg);
     -webkit-transform: scale(1.25,1.25) rotate(-5deg);

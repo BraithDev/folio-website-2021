@@ -28,6 +28,7 @@
     top: 0px; 
     margin-bottom: 0px; 
     position: absolute;
+    pointer-events: none;
 }
 
 .align-left {
@@ -44,12 +45,12 @@
 
 .skills-list {
     margin-left: auto;
-    margin-right: 0%;
+    margin-right: 0px;
     right: 0px;
     top: 0px;
     margin-top: 0px;
     float: right;
-    position: absolute;
+    max-width: 30%;
 }
 
 .hover-overlay:hover img {

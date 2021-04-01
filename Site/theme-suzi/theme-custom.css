@@ -49,6 +49,12 @@
     color: #ffffff;
 }
 
+.platform-button {
+    width: auto;
+    max-width: 50%;
+    margin-bottom: 20px;
+}
+
 .hover-overlay:hover img {
     transform: scale(1.25,1.25) rotate(-5deg);
     -webkit-transform: scale(1.25,1.25) rotate(-5deg);

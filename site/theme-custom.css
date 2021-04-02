@@ -1,6 +1,12 @@
 @import url("styles/themes/theme-suzi.min.css");
 .factory-flag{ visibility: hidden; }
 
+@media (max-width: 767px) {
+    #top-nav .navbar-brand {
+      font-size: 17px;
+    }
+  }
+
 
 /* About Me section */
 .profile-picture {

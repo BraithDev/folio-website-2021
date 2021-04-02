@@ -4,19 +4,33 @@
 
 /* About Me section */
 .profile-picture {
-    display: block;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
     position: center;
-    margin-top:auto;
-    width: 40%;
-    max-height: 24vw;
     clip-path: circle(45% at center);
 }
 
-.profile-picture img {
-    width: 100%;
+
+
+.square {
+    position: relative;
+
 }
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
 
 .overflow-width-50 {
     margin-left: -50%;

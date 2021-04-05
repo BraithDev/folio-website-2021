@@ -72,8 +72,27 @@
 .platform-button {
     width: auto;
     max-width: 50%;
-    margin-bottom: 20px;
 }
+
+.platform-link {
+    cursor: pointer;
+    margin-bottom: 5px;
+    bottom: 0px;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#horizontal-list li {
+		display: inline;
+	}
 
 .hover-overlay:hover img {
     transform: scale(1.25,1.25) rotate(-5deg);
